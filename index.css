@@ -12,21 +12,38 @@
     min-height: 60px;
     width: 100%;
     display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.brother_tiles{
+    height: 100%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    color: grey;
 }
 
 .home, .contact, .services, .about, .projects{
-    opacity: 50%;
-    background-color: whitesmoke;
-    width: 30%;
+    width: auto;
     height: 60px;
-    border: 1px solid rgb(0, 0, 0);
     margin-right: 10px;
     cursor: pointer;
+    color:grey;
+}
+
+button{
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: transparent;
 }
 
 .title_container{
     margin-top: -150px;
-    min-height: 500px;
+    min-height: 750px;
     width: 100%;
     background-color: white;
     display: flex;
@@ -35,10 +52,6 @@
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIIUfpfdEXpzbCh9T30KPtS0pdv7wYRnE28A&s);
     background-repeat:no-repeat;
     background-position: center;
-}
-
-.title{
-    color: black;
 }
 
 .text{
