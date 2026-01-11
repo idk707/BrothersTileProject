@@ -1,3 +1,7 @@
+html, body{
+    overflow-x:hidden;
+}
+
 .total_container{
     min-height: 100vh;
     max-width: 1920px;
@@ -9,6 +13,7 @@
 }
 
 .nav_container{
+    position: fixed;
     min-height: 60px;
     width: 100%;
     display: flex;
@@ -56,10 +61,78 @@ button{
 }
 
 .about_section{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
     min-height: 250px;
     width: 100%;
     background-color: lightgrey;
     border: 2px solid black;
+}
+
+.service_section{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    width: 100%;
+    background-color: rgb(255, 252, 252);
+}
+
+.slider{
+    overflow: hidden;
+    width: 80%;
+    margin: auto;
+}
+
+.slide{
+    display:none;
+    text-align: center;
+}
+
+.slide.active{
+    display:block;
+}
+
+.slide img{
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.arrow_container{
+    color:black;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 50px;
+    padding:10px;
+}
+
+.arrow_left{
+    left: 10px;
+}
+.arrow_right{
+    right: 10px;
+}
+
+.arrow_left, .arrow_right{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0;
+}
+
+.arrow_left:hover, .arrow_right:hover{
+    opacity: 100%;
+    transition: opacity 0.5s;
 }
 
 .text{
@@ -67,4 +140,6 @@ button{
 }
 .text2{
     text-align: center;
+    font-size:larger;
+    margin-top: 45px;
 }
