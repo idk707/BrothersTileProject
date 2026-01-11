@@ -1,6 +1,6 @@
 .total_container{
     min-height: 100vh;
-    max-width: 1200px;
+    max-width: 1920px;
     width: 100%;
     background-color: rgb(29, 29, 179);
     margin: 0 auto;
@@ -21,6 +21,24 @@
     height: 60px;
     border: 1px solid rgb(0, 0, 0);
     margin-right: 10px;
+    cursor: pointer;
+}
+
+.title_container{
+    margin-top: -150px;
+    min-height: 500px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIIUfpfdEXpzbCh9T30KPtS0pdv7wYRnE28A&s);
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+.title{
+    color: black;
 }
 
 .text{
