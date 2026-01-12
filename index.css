@@ -11,25 +11,35 @@ html, body{
     align-items: center;
 }
 
+button{
+    border:none;
+    background-color: transparent;
+}
+
 .nav_container{
     position: fixed;
     min-height: 60px;
     width: 100%;
+    display:flex;
+}
+
+.nav_right_container{
     display: flex;
     justify-content: right;
     align-items: center;
-    background-color: white;
+    width: 100%;
+
 }
 
 .brother_tiles_logo{
     height: 100%;
     width: auto;
+    margin-left: 150px;
     display: flex;
     justify-content: left;
     align-items: left;
     color: grey;
-    background-color: transparent;
-    border: none;
+    cursor: pointer;
 }
 
 .home, .contact, .services, .about, .projects{
@@ -38,8 +48,6 @@ html, body{
     margin-right: 10px;
     cursor: pointer;
     color:grey;
-    border: none;
-    background-color: transparent;
 }
 
 .title_section{
@@ -66,7 +74,7 @@ html, body{
     border: 2px solid black;
 }
 
-.service_section{
+.projects_section{
     position: relative;
     display:flex;
     flex-direction: column;
@@ -99,7 +107,7 @@ html, body{
 }
 
 .arrow_container{
-    color:black;
+    color: black;
     text-align: center;
     margin-top: 20px;
     cursor: pointer;
@@ -123,7 +131,7 @@ html, body{
     font-size: 50px;
     cursor: pointer;
     z-index: 10;
-    opacity: 0;
+    opacity: 100%;
 }
 
 .arrow_left:hover, .arrow_right:hover{
