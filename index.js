@@ -1,3 +1,5 @@
+// Simple slideshow functionality
+
 let currentIndex = 0;
 
 function prevSlide(){
