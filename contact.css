@@ -1,0 +1,94 @@
+.total_container{
+    background-color: navy
+}
+
+html, body{
+    overflow-x:hidden;
+}
+
+.total_container{
+    min-height: 100vh;
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    border:none;
+    background-color: transparent;
+}
+
+.nav_container{
+    position: fixed;
+    min-height: 60px;
+    width: 100%;
+    display:flex;
+}
+
+.nav_right_container{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+
+}
+
+.brother_tiles_logo{
+    height: 100%;
+    width: auto;
+    margin-left: 150px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    color: grey;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.home, .contact, .services, .about, .projects{
+    width: auto;
+    height: 60px;
+    margin-right: 20px;
+    cursor: pointer;
+    color:grey;
+}
+
+.title_section{
+    margin-top: -100px;
+    min-height: 750px;
+    width: 100%;
+    background-color: rgb(136, 87, 87);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* When ready to add a logo uncomment the following lines 54 - 56 */
+    /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIIUfpfdEXpzbCh9T30KPtS0pdv7wYRnE28A&s);
+    background-repeat:no-repeat;
+    background-position: center; */
+}
+
+.about_section{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 250px;
+    width: 100%;
+    background-color: lightgrey;
+    border: 2px solid black;
+}
+
+.projects_section{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    width: 100%;
+    background-color: rgb(255, 252, 252);
+}
