@@ -92,3 +92,16 @@ a {
     width: 100%;
     background-color: rgb(255, 252, 252);
 }
+.contact_container{
+    display:flex;
+    min-height: 400px;
+    width:75%;
+}
+.contact_section{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    background-color: lightgray;
+    min-height: 100px;
+    width: 80%;
+}
