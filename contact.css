@@ -1,18 +1,14 @@
-.total_container{
-    background-color: navy
-}
-
 html, body{
     overflow-x:hidden;
 }
 
 .total_container{
+    display:flex;
+    background-color: navy;
     min-height: 100vh;
-    max-width: 1920px;
+    max-width: 5500px;
     width: 100%;
     margin: 0 auto;
-    justify-content: center;
-    align-items: center;
 }
 
 button{
@@ -48,6 +44,7 @@ button{
 
 a {
     text-decoration: none;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .home, .contact, .services, .about, .projects{
@@ -94,14 +91,37 @@ a {
 }
 .contact_container{
     display:flex;
+    justify-content: center;
+    align-items: center;
     min-height: 400px;
-    width:75%;
+    width:100%;
 }
 .contact_section{
-    display: flex;
-    align-self: center;
-    justify-self: center;
     background-color: lightgray;
-    min-height: 100px;
-    width: 80%;
+    min-height: 400px;
+    width:100%;
+}
+.get_in_touch{
+    margin-left: 150px;
+    color: black;
+    font-size: 50px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 75px;
+}
+.user_info{
+    
+    font-size: 17px;
+    margin-left: 150px;
+    margin-right: 100px;
+    font-weight: bold;
+}
+.submit_button{
+    margin-top: 25px;
+    width: 100px;
+    height: 40px;
+    background-color: grey;
+    border: 1px solid black;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
 }
