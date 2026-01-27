@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="/src/css/contact.css">
 </head>
 <body class="total_container">
     <div class="nav_container">
@@ -38,12 +38,34 @@
         <div class="contact_container">
             <div class="contact_section">
                 <div class="get_in_touch">Get In Touch</div>
-            <div class="user_info">First Name</div>
-                <input style="margin-left: 150px;" type="text" id="first_name" name="first_name">
-            <div class="user_info">Last Name</div>
-                <button class="submit_button" id="submitButton">Submit</button>
+                <div style="display: flex;">
+                    <div class="form_group">
+                        <label class="user_info" for="first_name">First Name</label>
+                        <input class="user_info" type="text" id="first_name" name="first_name">
+                    </div>
+                    <div class="form_group">
+                        <label class="user_info" for="last_name">Last Name</label>
+                        <input class="user_info" type="text" id="last_name" name="last_name">
+                    </div>
+                    <!-- <button class="submit_button" id="submitButton">Submit</button> -->
+                </div>
+                <div style="margin-top: 30px; display: flex;">
+                <div class="form_group">
+                    <label class="user_info" for="phone">Phone Number</label>
+                    <input class="user_info" type="text" id="phone" name="phone">
+                </div>
+                <div class="form_group">
+                    <label class="user_info" for="email">Email</label>
+                    <input class="user_info" type="text" id="phone" name="phone">
+                </div>
+                </div>
+                <div>
+                    <label class="user_info" for="message">Message(Optional)</label>
+                    <input class="message" type="text" id="phone" name="phone">
+                </div>
             </div>
+        
         </div>
-    <script src="/index.js"></script>
+    <script src="/src/js/contact.js"></script>
 </body>
 </html>
