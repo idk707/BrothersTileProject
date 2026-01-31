@@ -2,7 +2,7 @@
     display:flex;
     background-color: navy;
     min-height: 100vh;
-    max-width: 5500px;
+    min-width: 100vw;
     width: 100%;
     margin: 0 auto;
 }
@@ -16,24 +16,22 @@ button{
     position: fixed;
     min-height: 60px;
     width: 100%;
-    display:flex;
+    display: flex;
 }
 
 .nav_right_container{
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
     width: 100%;
-
+    min-height: 60px;
 }
 
 .brother_tiles_logo{
-    height: 100%;
+    min-height: 100%;
     width: auto;
-    margin-left: 150px;
-    display: flex;
-    justify-content: left;
-    align-items: left;
+    margin-left: 100px;
+    margin-right: 270px;
     color: grey;
     cursor: pointer;
 }
@@ -43,99 +41,29 @@ a {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+.home{
+    margin-left: 400px;
+}
+
 .home, .contact, .services, .about, .projects{
     width: auto;
-    height: 60px;
+    min-height: 60px;
     margin-right: 20px;
     cursor: pointer;
     color:grey;
 }
 
-.title_section{
-    margin-top: -100px;
-    min-height: 750px;
-    width: 100%;
-    background-color: rgb(136, 87, 87);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* When ready to add a logo uncomment the following lines 54 - 56 */
-    /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIIUfpfdEXpzbCh9T30KPtS0pdv7wYRnE28A&s);
-    background-repeat:no-repeat;
-    background-position: center; */
-}
-
-.about_section{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 250px;
-    width: 100%;
-    background-color: lightgrey;
-    border: 2px solid black;
-}
-
-.projects_section{
-    position: relative;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 400px;
-    width: 100%;
-    background-color: rgb(255, 252, 252);
-}
 .contact_container{
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 400px;
-    width:100%;
+    width: 100%;
+    min-height: 100%;
 }
+
 .contact_section{
-    background-color: lightgray;
+    background-color: rgb(175, 175, 175);
     min-height: 100%;
     width: 50%;
 }
-.get_in_touch{
-    margin-top: 100px;
-    /* margin-left: 150px; */
-    color: black;
-    text-align: center;
-    font-size: 50px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-bottom: 50px;
-}
-.user_info{
-    text-align: center;
-    font-size: 17px;
-    margin-left: 70px;
-    font-weight: bold;
-}
-.message{
-    margin-left: 20px;
-    width: 200px;
-}
-.form_group{
-    margin-bottom: 15px;
-}
-label{
-    display: block;
-    margin-bottom: 5px;
-}
-input {
-    width: 230px;
-    padding: 5px;
-    box-sizing: border-box;
-}
 
-.submit_button{
-    margin-top: 25px;
-    width: 100px;
-    height: 40px;
-    background-color: grey;
-    border: 1px solid black;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-}
