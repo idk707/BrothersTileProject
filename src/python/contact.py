@@ -37,8 +37,28 @@ def send_email(firstName, lastName, phoneNumber, email, message):
         server.login(sender_email, sender_password)
         server.send_message(msg)
 
+def save_to_sheets(firstName, lastName, phoneNumber, email, message):
+    scope = [
+        "https://www.googleapis.com/auth/spreadsheets",
+        "https://www.googleapis.com/auth/drive"
+    ]
 
+    creds = Credentials.from_service_account_file(
+        "credentials.json",
+        scopes = scope
+    )
 
+    client = gspread.authorize(creds)
+
+    sheet = client.open("Contact Form Responses").sheet1
+
+    sheet.append_row([
+        firstName,
+        lastName,
+        phoneNumber,
+        email,
+        message
+    ])
 
 @app.route("/contact", methods=["POST"])
 
@@ -51,10 +71,26 @@ def contact():
     email = data.get("email")
     message = data.get("message")
 
-    send_email(firstName, lastName, phoneNumber, email, message)
+    if not firstName or not email or not message:
+        return jsonify({
+            "status" : "error",
+            "message" : "Missing required fields."
+        }), 400
+    
+    try:
+        send_email(firstName, lastName, phoneNumber, email, message)
+        save_to_sheets(firstName, lastName, phoneNumber, email, message)
 
-    response = {
-        "status": "success",
-        "message": f"Thank you {firstName} for reaching out! We will get back to you at {email}."
-    }
-    return jsonify(response), 200
+        return jsonify({
+            "status" : "success",
+            "message" : f"Thank You {firstName}! We will contact you at {email}."
+        }), 200
+    except Exception as e:
+        print("Error", e)
+        return jsonify({
+            "status": "error",
+            "message": "Something went wrong. Please try again."
+        }), 500
+    
+if __name__ == "__main__":
+    app.run(debug=True, port=5000)
