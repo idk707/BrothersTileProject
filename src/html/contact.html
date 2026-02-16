@@ -38,15 +38,31 @@
         <div class="contact_container">
             <div class="contact_section">
                 <h1>Get In Touch</h1>
-                <div class="labels-row">
-                    <label class="placeholder" for="firtName">First Name:</label>
-                    <label class="placeholder" for="lastName">Last Name:</label>
-                </div>
-                <div class="inputs-row">
-                    <input type="text" name="firstName" id="firstName">
-                    <input type="text" name="lastName" id="lastName">
-                </div>
+                <form id="contactForm">
+                    <div style="display: flex; justify-content: center;">
+                        <label class="placeholder" for="firtName">First Name <span style="color: red; font-weight: normal;"> *</span>:</label>
+                        <input type="text" name="firstName" id="firstName" required>
 
+                        <label class="placeholder" for="lastName">Last Name<span style="color: red; font-weight: normal;"> *</span>:</label>
+                        <input type="text" name="lastName" id="lastName" required>
+                    </div>
+                    <div class="centeralize">
+                        <label class="placeholder" for="phoneNumber">Phone Number<span style="color: red; font-weight: normal;"> *</span>:</label>
+                        <input type="text" name="phoneNumber" id="phoneNumber" required>
+
+                        <label class="placeholder" for="email">Email <span style="color: red; font-weight: normal;"> *</span>:</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="centeralize">
+                        <label for="message" class="placeholder">Message</label>
+                    </div>
+                    <div>
+                        <input type="text" class="message_box">
+                    </div>
+                    <div class="centeralize">
+                        <input style="font-size: 12px; width: 95%" type="submit" value="Submit">
+                    </div>
+                </form>
             </div>
         </div>
     <script src="/src/js/contact.js"></script>
