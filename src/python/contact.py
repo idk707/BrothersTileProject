@@ -12,7 +12,7 @@ CORS(app)
 def send_email(firstName, lastName, phoneNumber, email, message):
     sender_email = os.environ.get("EMAIL_USER")
     sender_password = os.environ.get("EMAIL_PASS")
-    reciever_email = sender_email
+    receiver_email = sender_email
 
     subject = "New Contact Form Submission"
 
@@ -31,7 +31,7 @@ def send_email(firstName, lastName, phoneNumber, email, message):
     msg = MIMEText(body)
     msg["Subject"] = subject
     msg["From"] = sender_email
-    msg["To"] = reciever_email
+    msg["To"] = receiver_email
 
     with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
         server.login(sender_email, sender_password)

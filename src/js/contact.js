@@ -1,11 +1,12 @@
-document.getElementById("submitButton").addEventListener("click", () => {
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
     const firstName = document.getElementById("firstName").value;
     const lastName = document.getElementById("lastName").value;
     const phoneNumber = document.getElementById("phoneNumber").value;
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
-
-    fetch("/contact", {
+    
+    fetch("http://localhost:5000/contact", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -20,6 +21,13 @@ document.getElementById("submitButton").addEventListener("click", () => {
     })
     .then(res => res.json())
     .then(data => {
+        alert(data.message)
         console.log(data.message);
-    });
+    })
+    .then(res => res.json())
+    .then(data => {
+        alert(data.message);
+        this.reset(); // clears form
+    })
+    .catch(err => console.error("Error:", err));
 });
