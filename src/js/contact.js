@@ -7,27 +7,22 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     const message = document.getElementById("message").value;
     
     fetch("http://localhost:5000/contact", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            firstName,
-            lastName,
-            phoneNumber,
-            email,
-            message
-        })
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        firstName,
+        lastName,
+        phoneNumber,
+        email,
+        message
     })
-    .then(res => res.json())
-    .then(data => {
-        alert(data.message)
-        console.log(data.message);
-    })
-    .then(res => res.json())
-    .then(data => {
-        alert(data.message);
-        this.reset(); // clears form
-    })
-    .catch(err => console.error("Error:", err));
+})
+.then(res => res.json())
+.then(data => {
+    alert(data.message);
+    this.reset();
+})
+.catch(err => console.error("Error:", err));
 });

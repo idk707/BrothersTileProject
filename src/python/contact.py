@@ -5,6 +5,7 @@ from email.mime.text import MIMEText
 import os
 import gspread
 from google.oauth2.service_account import Credentials
+import json
 
 app = Flask(__name__)
 CORS(app)
@@ -43,9 +44,9 @@ def save_to_sheets(firstName, lastName, phoneNumber, email, message):
         "https://www.googleapis.com/auth/drive"
     ]
 
-    creds = Credentials.from_service_account_file(
-        "credentials.json",
-        scopes = scope
+    creds = Credentials.from_service_account_info(
+        json.loads(os.environ["GOOGLE_CREDS"]),
+        scopes=scope
     )
 
     client = gspread.authorize(creds)
