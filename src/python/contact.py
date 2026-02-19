@@ -8,7 +8,7 @@ from google.oauth2.service_account import Credentials
 import json
 
 app = Flask(__name__)
-CORS(app, resources={r"/contact": {"origins": "*"}})
+CORS(app)
 
 def send_email(firstName, lastName, phoneNumber, email, message):
     sender_email = os.environ.get("EMAIL_USER")
@@ -61,9 +61,12 @@ def save_to_sheets(firstName, lastName, phoneNumber, email, message):
         message
     ])
 
-@app.route("/src/python/contact", methods=["POST"])
+@app.route("/contact", methods=["POST", "OPTIONS"])
 
 def contact():
+    if request.method== "OPTIONS":
+        return jsonify({"status" : "ok"}), 200
+
     data = request.json
 
     firstName = data.get("firstName")
