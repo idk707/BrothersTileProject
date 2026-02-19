@@ -1,0 +1,13 @@
+{
+  "name": "BrothersTileProject",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "forwardPorts": [5000],
+  "portsAttributes": {
+    "5000": {
+      "label": "Flask Contact API",
+      "onAutoForward": "notify",
+      "visibility": "public"
+    }
+  },
+  "postCreateCommand": "pip install flask flask-cors google-auth gspread && export EMAIL_USER='cauanjorge16@gmail.com' && export EMAIL_PASS='mtvz akuk mwsz vzjn'"
+}
