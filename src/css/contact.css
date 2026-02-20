@@ -46,7 +46,7 @@ a {
     margin-left: 400px;
 }
 
-.home, .contact, .services, .about, .projects{
+.home, .contact, .services, .projects{
     width: auto;
     min-height: 60px;
     margin-right: 20px;
