@@ -9,46 +9,47 @@
     <link rel="stylesheet" href="/src/frontend/css/contact.css">
 </head>
 <body class="total_container">
-    <div class="nav_container">
-            <div class="nav_right_container">
-                <a href="/index.html">
-                    <div class="brother_tiles_logo">
-                        <!-- Implement logo here line 14 -->
-                        <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIIUfpfdEXpzbCh9T30KPtS0pdv7wYRnE28A&s" alt="Brothers Tiles Logo" height="100px"> -->
-                        <h2>Logo</h2>
-                    </div>
-                </a>
-                <a href="/index.html" class="home">
-                    <h2 class="text">Home</h2>
-                </a>
-                <a href="/src/frontend/html/contact.html" class="contact">
-                    <h2 class="text">Contact</h2>
-                </a>
-                <a href="/src/frontend/html/services.html" class="services">
-                    <h2 class="text">Services</h2>
-                </a>
-                <a href="/src/frontend/html/projects.html" class="projects">
-                    <h2 class="text">Projects</h2>
-                </a>
+        <div class="nav_container">
+        <a href="/index.html">
+            <div class="brother_tiles_logo">
+                <!-- Implement logo here line 14 -->
+                <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIIUfpfdEXpzbCh9T30KPtS0pdv7wYRnE28A&s" alt="Brothers Tiles Logo" height="100px"> -->
+                    <h2>Logo</h2>
             </div>
+        </a>
+        <div class="nav_right_container">
+            <a href="/index.html" class="home">
+                <h2 class="text">Home</h2>
+            </a>
+            <a href="/src/frontend/html/contact.html" class="contact">
+                <h2 class="text">Contact</h2>
+            </a>
+            <a href="/src/frontend/html/services.html" class="services">
+                <h2 class="text">Services</h2>
+            </a>
+            <a href="/src/frontend/html/projects.html" class="projects">
+                <h2 class="text">Projects</h2>
+            </a>
         </div>
+    </div>
+
         <div class="contact_container">
             <div class="contact_section">
                 <h1>Get In Touch</h1>
                 <form id="contactForm">
                     <div style="display: flex; justify-content: center;">
-                        <label class="placeholder" for="firtName">First Name <span style="color: red; font-weight: normal;"> *</span>:</label>
-                        <input type="text" name="firstName" id="firstName" required>
+                        <label class="placeholder" for="firtName">First Name<span style="color: red; font-weight: normal;">*</span>:</label>
+                        <input style="text-align: center;" type="text" name="firstName" id="firstName" placeholder="John" required>
 
-                        <label class="placeholder" for="lastName">Last Name<span style="color: red; font-weight: normal;"> *</span>:</label>
-                        <input type="text" name="lastName" id="lastName" required>
+                        <label class="placeholder" for="lastName">Last Name<span style="color: red; font-weight: normal;">*</span>:</label>
+                        <input style="text-align: center;" type="text" name="lastName" id="lastName" placeholder="Doe" required>
                     </div>
                     <div class="centeralize">
-                        <label class="placeholder" for="phoneNumber">Phone Number<span style="color: red; font-weight: normal;"> *</span>:</label>
-                        <input type="text" name="phoneNumber" id="phoneNumber" required>
+                        <label class="placeholder" for="phoneNumber">Phone Number<span style="color: red; font-weight: normal;">*</span>:</label>
+                        <input style="text-align: center;" type="tel" name="phoneNumber" id="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
 
-                        <label class="placeholder" for="email">Email <span style="color: red; font-weight: normal;"> *</span>:</label>
-                        <input type="email" name="email" id="email" required>
+                        <label class="placeholder" for="email">Email:</label>
+                        <input style="text-align: center;" type="email" name="email" id="email"  placeholder="example@gmail.com">
                     </div>
                     <div class="centeralize">
                         <label for="message" class="placeholder">Message</label>
@@ -56,7 +57,8 @@
                     <div>
                         <textarea class="message_box" name="message" id="message"></textarea>
                     </div>
-                    <div class="centeralize">
+                    <div style="display: flex; justify-content: center;">
+                        <br>
                         <input style="font-size: 12px; width: 95%" type="submit" value="Submit">
                     </div>
                 </form>

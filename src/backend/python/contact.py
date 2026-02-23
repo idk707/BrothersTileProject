@@ -47,9 +47,8 @@ def save_to_sheets(firstName, lastName, phoneNumber, email, message):
     "https://www.googleapis.com/auth/drive"
     ]
 
-
     creds = Credentials.from_service_account_file(
-        "backend/credentials.json",
+        "../credentials.json",
         scopes=scope
     )
 

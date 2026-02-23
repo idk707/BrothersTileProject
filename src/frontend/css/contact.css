@@ -16,22 +16,24 @@ button{
     position: fixed;
     min-height: 60px;
     width: 100%;
-    display: flex;
+    display:flex;
 }
 
 .nav_right_container{
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     width: 100%;
-    min-height: 60px;
+
 }
 
 .brother_tiles_logo{
-    min-height: 100%;
+    height: 100%;
     width: auto;
-    margin-left: 100px;
-    margin-right: 270px;
+    margin-left: 150px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
     color: grey;
     cursor: pointer;
 }
@@ -39,16 +41,11 @@ button{
 a {
     text-decoration: none;
     font-size: 13px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.home{
-    margin-left: 400px;
 }
 
 .home, .contact, .services, .projects{
     width: auto;
-    min-height: 60px;
+    height: 60px;
     margin-right: 20px;
     cursor: pointer;
     color:grey;
