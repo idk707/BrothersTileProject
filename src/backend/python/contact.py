@@ -6,6 +6,9 @@ import os
 import gspread
 from google.oauth2.service_account import Credentials
 import json
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
@@ -40,12 +43,13 @@ def send_email(firstName, lastName, phoneNumber, email, message):
 
 def save_to_sheets(firstName, lastName, phoneNumber, email, message):
     scope = [
-        "https://www.googleapis.com/auth/spreadsheets",
-        "https://www.googleapis.com/auth/drive"
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive"
     ]
 
-    creds = Credentials.from_service_account_info(
-        json.loads(os.environ["GOOGLE_CREDS"]),
+
+    creds = Credentials.from_service_account_file(
+        "backend/credentials.json",
         scopes=scope
     )
 
