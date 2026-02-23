@@ -9,13 +9,15 @@ import json
 from dotenv import load_dotenv
 
 load_dotenv()
+EMAIL_USER = os.getenv("EMAIL_USER")
+EMAIL_PASS = os.getenv("EMAIL_PASS")
 
 app = Flask(__name__)
 CORS(app)
 
 def send_email(firstName, lastName, phoneNumber, email, message):
-    sender_email = os.environ.get("EMAIL_USER")
-    sender_password = os.environ.get("EMAIL_PASS")
+    sender_email = EMAIL_USER
+    sender_password = EMAIL_PASS
     receiver_email = sender_email
 
     subject = "New Contact Form Submission"
