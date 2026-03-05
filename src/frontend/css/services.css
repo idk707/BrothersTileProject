@@ -1,4 +1,77 @@
 .total_container{
     min-height: 100vh;
     min-width: 100vw;
+    background-color: bisque;
+    margin: 0 auto;
 }
+.nav_container{
+    position: fixed;
+    min-height: 60px;
+    width: 100%;
+    display:flex;
+}
+
+.nav_right_container{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+
+}
+
+.brother_tiles_logo{
+    height: 100%;
+    width: auto;
+    margin-left: 150px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    color: grey;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.home, .contact, .services, .projects{
+    width: auto;
+    height: 60px;
+    margin-right: 20px;
+    cursor: pointer;
+    color:grey;
+}
+.pillar_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+    /* background-color: black; */
+    width: 33%;
+    min-height: 100vh;
+}
+#first_pillar, #second_pillar, #third_pillar{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    padding: 10px;
+    min-height: 100vh;
+    width: 20%;
+    /* start offscreen; slide in when we add `.visible` */
+    transition-delay: 0.0s;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+#first_pillar.visible, #second_pillar.visible, #third_pillar.visible{
+    transform: translateY(0);
+}
+/* the hidden_menu class is no longer used to hide via display:none;
+   it was preventing the slide animation when the element was removed from layout. */
+/* .hidden_menu{
+    display: none;
+}*/
