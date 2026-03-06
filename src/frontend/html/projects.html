@@ -36,16 +36,71 @@
         <br><br>
     </div>
     <div class="projects_container">
-        <div class="first_project_container">
-            <img src="/src/frontend/images/project1.jpg" alt="Project 1" id="first_project">
+        <div class="slider">
+             <button class="arrow_left" onclick="prevSlide(this)">&#10094;</button>
+
+             <div class="slide active">
+                <img src="/src/frontend/images/project1.jpg" alt="Project 1">
+                <div class="caption">Project 1: Kitchen Backsplash</div>
+             </div>
+
+             <div class="slide">
+                <img src="/src/frontend/images/project2.jpg" alt="Project 1">
+                <div class="caption">Project 1: Kitchen Backsplash</div>
+             </div>
+
+             <div class="slide">
+                <img src="/src/frontend/images/project3.jpg" alt="Project 1">
+                <div class="caption">Project 1: Kitchen Backsplash</div>
+             </div>
+
+             <button class="arrow_right" onclick="nextSlide(this)">&#10095;</button>
         </div>
-        <div class="sec_project_container">
-            <img src="/src/frontend/images/image.png" alt="Project 2" id="second_project" class="hidden">
+
+        <div class="slider">
+             <button class="arrow_left" onclick="prevSlide(this)">&#10094;</button>
+
+             <div class="slide active">
+                <img src="/src/frontend/images/project1.jpg" alt="Project 1">
+                <div class="caption">Project 2: Kitchen Backsplash</div>
+             </div>
+
+             <div class="slide">
+                <img src="/src/frontend/images/project2.jpg" alt="Project 2">
+                <div class="caption">Project 2: Kitchen Backsplash</div>
+             </div>
+
+             <div class="slide">
+                <img src="/src/frontend/images/project3.jpg" alt="Project 3">
+                <div class="caption">Project 2: Kitchen Backsplash</div>
+             </div>
+
+             <button class="arrow_right" onclick="nextSlide(this)">&#10095;</button>
         </div>
-        <div class="third_project_container">
-            <img src="/src/frontend/images/project3.jpg" alt="Project 3" id="third_project">
+
+        <div class="slider">
+             <button class="arrow_left" onclick="prevSlide(this)">&#10094;</button>
+
+             <div class="slide active">
+                <img src="/src/frontend/images/image.png" alt="Project 1">
+                <div class="caption">Project 3: Kitchen Backsplash</div>
+             </div>
+
+             <div class="slide">
+                <img src="/src/frontend/images/image.png" alt="Project 2">
+               <div class="caption">Project 3: Kitchen Backsplash</div>
+             </div>
+
+             <div class="slide">
+                <img src="/src/frontend/images/image.png" alt="Project 3">
+                <div class="caption">Project 3: Kitchen Backsplash</div>
+             </div>
+
+             <button class="arrow_right" onclick="nextSlide(this)">&#10095;</button>
         </div>
+        
     </div>
+
 
     <script src="/src/frontend/js/projects.js"></script>
 </body>

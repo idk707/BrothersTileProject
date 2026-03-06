@@ -12,3 +12,52 @@ document.addEventListener('DOMContentLoaded', () => {
         third_project.style.transitionDelay = '0.6s'
     });
 });
+
+// Simple slideshow functionality
+
+function nextSlide(btn){
+
+    const slider = btn.parentElement;
+    const slides = slider.querySelectorAll(".slide");
+
+    let activeIndex = 0;
+
+    slides.forEach((slide, index) => {
+        if(slide.classList.contains("active")){
+            activeIndex = index;
+        }
+        slide.classList.remove("active");
+    });
+
+    activeIndex++;
+
+    if(activeIndex >= slides.length){
+        activeIndex = 0;
+    }
+
+    slides[activeIndex].classList.add("active");
+}
+
+
+function prevSlide(btn){
+
+    const slider = btn.parentElement;
+    const slides = slider.querySelectorAll(".slide");
+
+    let activeIndex = 0;
+
+    slides.forEach((slide, index) => {
+        if(slide.classList.contains("active")){
+            activeIndex = index;
+        }
+        slide.classList.remove("active");
+    });
+
+    activeIndex--;
+
+    if(activeIndex < 0){
+        activeIndex = slides.length - 1;
+    }
+
+    slides[activeIndex].classList.add("active");
+}

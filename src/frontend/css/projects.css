@@ -53,6 +53,7 @@ a {
     cursor: pointer;
     color:grey;
 }
+
 /* .title_container{
     display: flex;
     position: absolute;
@@ -69,18 +70,20 @@ a {
     width: 100%;
     margin-top: 80px;
 }
+
 p{
     font-size: 15px;
     text-align: justify;
     width: 35%;
 }
+
 .projects_container{
-    display: flex;
-    flex-wrap: wrap;             /* allow multiple project boxes on a row */
-    justify-content: center;     /* center children horizontally */
-    align-items: flex-start;     /* align children at top of row */ 
-    width: 100%;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
 }
+
 .first_project_container, .sec_project_container, .third_project_container{
     margin: 65px;
     background-color: black;
@@ -90,6 +93,7 @@ p{
     width: 300px;
     min-height: 280px;
 }
+
 #first_project, #second_project, #third_project{
     width: 100%;
     display: flex;
@@ -98,9 +102,83 @@ p{
     transition-delay: 0.0s;
     transform: translateY(100%);
 }
+
 .hidden{
     left: -100%;
 }
+
 #first_project.visible, #second_project.visible, #third_project.visible{
     transform: translateY(0);
+}
+
+button{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.slider{
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    /* height: 300px; */
+    margin: auto;
+
+}
+
+.slide{
+    display:none;
+    text-align: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.slide.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.slide img{
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.arrow_container{
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 50px;
+    padding:10px;
+}
+
+.arrow_left{
+    display: flex;
+    justify-self: left;
+    align-self: center;
+    /* margin-right: 10px; */
+}
+.arrow_right{
+    right: 30px;
+}
+
+.arrow_left, .arrow_right{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    color: black;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrow_left:hover, .arrow_right:hover{
+    opacity: 100%;
+    transition: opacity 0.5s;
 }
